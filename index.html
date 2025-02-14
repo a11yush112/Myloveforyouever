@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Will You Marry Me?</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f5e6f3;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 4rem;
+      color: #d953a1;
+      margin-bottom: 20px;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    h2 {
+      font-size: 2rem;
+      color: #ff77b5;
+      margin-bottom: 20px;
+    }
+
+    .heart {
+      font-size: 100px;
+      color: red;
+      animation: pulse 1.5s infinite;
+    }
+
+    button {
+      font-size: 1.5rem;
+      padding: 15px 30px;
+      background-color: #ff77b5;
+      border: none;
+      color: white;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #d953a1;
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+      100% { transform: scale(1); }
+    }
+
+  </style>
+</head>
+<body>
+  <div>
+    <h1>My Love,</h1>
+    <h2>Will you be mine forever?</h2>
+    <div class="heart">❤️</div>
+    <br>
+    <button onclick="showProposal()">Click to accept my heart</button>
+    <div id="proposalMessage" style="display:none; margin-top: 20px;">
+      <h2>Forever, Yes!</h2>
+      <p style="font-size: 1.5rem; color: #ff77b5;">I can't imagine my life without you. You are my everything. Will you marry me?</p>
+    </div>
+  </div>
+
+  <script>
+    function showProposal() {
+      document.getElementById('proposalMessage').style.display = 'block';
+      document.querySelector('button').style.display = 'none';
+    }
+  </script>
+</body>
+</html>
